@@ -383,7 +383,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <ul className="flex flex-col gap-3.5 p-4 text-base">
+        <ul className="flex flex-col gap-4 p-4 text-base">
           <NavLink
             to="/"
             onClick={() => {
@@ -441,7 +441,7 @@ const Navbar = () => {
           </NavLink>
         </ul>
 
-        <div className="px-4">
+        <div className="px-4 pt-1.5">
           {token ? (
             <button
               onClick={() => {

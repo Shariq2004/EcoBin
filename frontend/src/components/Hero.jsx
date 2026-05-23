@@ -18,9 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <div
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-between px-5 sm:px-8 lg:px-[9%] pt-22 md:pt-28 pb-10 sm:pb-16 gap-5 md:gap-10 bg-[#F5FBF9]"
-    >
+    <div className="w-full min-h-screen overflow-x-hidden flex flex-col md:flex-row items-center justify-between px-5 sm:px-8 lg:px-[9%] pt-22 md:pt-28 pb-10 sm:pb-16 gap-5 md:gap-10 bg-[#F5FBF9]">
       {/*---- Left Side (Content) ----*/}
       <div className="w-full md:w-1/2 flex flex-col gap-3 sm:gap-6 md:gap-8  text-left">
         <h1
@@ -70,16 +68,19 @@ const Hero = () => {
       </div>
 
       {/*---- Right Side (Image) ----*/}
-      <div className="w-[120%] sm:w-[90%] md:w-[60%] lg:w-[50%] object-contain drop-shadow-lg flex justify-center items-center">
+      <div className="w-full sm:w-[90%] md:w-[55%] lg:w-[50%] flex justify-center items-center">
         <img
           src={assets.home_banner}
           alt="EcoBin Banner"
           className="
-          w-[85%] sm:w-[80%] md:w-[90%] lg:w-[80%]
+          w-full
+          max-w-[320px]
+          sm:max-w-[420px]
+          md:max-w-[500px]
+          lg:max-w-[550px]
           object-contain
           drop-shadow-lg
-        "
-        />
+        "/>
       </div>
     </div>
   );
