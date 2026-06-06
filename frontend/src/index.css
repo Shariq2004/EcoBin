@@ -20,3 +20,40 @@ html {
 ::-webkit-scrollbar{
   @apply hidden;
 }
+
+
+
+@keyframes cameraShake {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  5% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+
+  10% {
+    transform: rotate(10deg) scale(1.15);
+  }
+
+  15% {
+    transform: rotate(-8deg) scale(1.1);
+  }
+
+  20% {
+    transform: rotate(8deg) scale(1.05);
+  }
+
+  25% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.camera-shake {
+  animation: cameraShake 2s ease-in-out infinite;
+  transform-origin: center;
+}

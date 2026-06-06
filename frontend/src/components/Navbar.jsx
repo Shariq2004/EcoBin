@@ -95,10 +95,18 @@ const Navbar = () => {
             src={assets.logo}
             alt="EcoBin"
           />
-          <h1 className="text-2xl md:text-3xl font-semibold text-green-600">
+          <h1 className="text-2xl md:text-3xl font-semibold text-green-600 select-none">
             EcoBin
           </h1>
         </div>
+
+        <a  href="https://ecobin-admin-platform.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-2 py-0.5 text-xs rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-200"
+        >
+         Admin
+        </a>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-5 lg:gap-7 text-sm lg:text-base">

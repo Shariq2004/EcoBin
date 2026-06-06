@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../components/Loader";
 import useClickOutside from "../hooks/useClickOutside";
 
+
 export default function ReportWaste() {
   const {
     backendUrl,
@@ -269,7 +270,8 @@ export default function ReportWaste() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="bg-white p-4 md:p-6 rounded-xl shadow">
           <h2 className="text-base sm:text-lg md:text-xl font-medium mb-4 text-gray-600">
-            Upload Waste Image
+              <span className="md:hidden">Capture Waste Image</span>
+              <span className="hidden md:inline">Upload Waste Image</span>
           </h2>
 
           {/* UPLOAD BOX */}
@@ -291,13 +293,24 @@ export default function ReportWaste() {
 
             {!preview ? (
               <>
-                <i className="fa-solid fa-upload text-2xl sm:text-3xl md:text-4xl text-green-500 mb-3"></i>
+                <div className="md:hidden flex items-center justify-center bg-green-100 w-13 h-13 rounded-full mb-3">
+                 <i className="fa-regular fa-camera text-2xl text-green-500 camera-shake"></i>
+                </div>
 
-                <p className="text-green-600 text-sm md:text-lg mb-1 text-center">
+                <div className="hidden md:block">
+                 <i className="fa-solid fa-upload text-2xl sm:text-3xl md:text-4xl text-green-500 mb-3"></i>
+                </div>
+          
+                {/* Text for mobile view */}
+                <p className="text-green-500 font-medium text-sm mb-1 text-center md:hidden">
+                  Tap to Capture Waste Image
+                </p>
+
+                <p className="text-green-600 text-sm md:text-lg mb-1 text-center hidden md:block">
                   {dragActive ? "Drop here..." : "Upload a file or drag & drop"}
                 </p>
 
-                <p className="text-gray-500 text-xs">PNG, JPG up to 10MB</p>
+                <p className="text-gray-500 text-xs  hidden md:block">PNG, JPG up to 10MB</p>
               </>
             ) : (
               <img
