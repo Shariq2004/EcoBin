@@ -174,7 +174,7 @@ function MyRequests() {
               onClick={() => setSearch("")}
               className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700 cursor-pointer"
             >
-              <i className="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-xmark text-xs md:text-sm"></i>
             </button>
           )}
         </div>
@@ -248,14 +248,14 @@ function MyRequests() {
           {currentReports.map((req) => (
             <div
               key={req._id}
-              className="w-full bg-white shadow-md p-2 sm:p-3 rounded-xl 
+              className="w-full bg-white shadow-md p-3 rounded-xl 
                  flex flex-col md:flex-row gap-4 
                  hover:shadow-lg transition border border-gray-200"
             >
               <img
                 src={req.image?.url || "/placeholder.png"}
                 alt="waste-image"
-                className="w-full md:max-w-50  h-40 sm:h-48 md:h-30 object-cover rounded-lg"
+                className="w-full md:max-w-50  h-40 sm:h-48 md:h-30 object-cover rounded-md"
               />
 
               {/* RIGHT CONTENT */}
@@ -379,7 +379,8 @@ function MyRequests() {
         </div>
       )}
 
-      {reports.length > 5 && (
+      {/* {reports.length > 5 && ( */}
+      {totalPages > 1 && (
       <div className="flex justify-center items-center gap-4 mt-8">
         <button
           disabled={currentPage === 1}

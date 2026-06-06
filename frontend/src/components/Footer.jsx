@@ -157,6 +157,10 @@ const Footer = () => {
               Terms of Service
             </a>
           </div>
+
+          <p>
+           Built with <i className="fa-solid fa-heart text-xs"></i> by Shariq
+          </p>
         </div>
       </div>
     </footer>
