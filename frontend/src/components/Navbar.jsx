@@ -82,7 +82,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <div className=" fixed top-0 left-0 w-full z-50 bg-white shadow-sm flex items-center justify-between px-3 sm:px-8 lg:px-[8%] py-3">
+      <div className=" fixed top-0 left-0 w-full h-14 sm:h-16 z-50 bg-white shadow-sm flex items-center justify-between px-3 sm:px-8 lg:px-[8%]">
         <div
           className="flex items-center gap:1 cursor-pointer"
           onClick={() => {
@@ -100,13 +100,13 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <a  href="https://ecobin-admin-platform.vercel.app"
+        {/* <a  href="https://ecobin-admin-platform.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
           className="px-2 py-0.5 text-xs rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-200"
         >
          Admin
-        </a>
+        </a> */}
 
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-5 lg:gap-7 text-sm lg:text-base">
@@ -147,7 +147,7 @@ const Navbar = () => {
  
                   {/* showNotifications  */}
                 <div
-                 className={`fixed top-[66px] md:top-[60px] left-0 sm:left-auto sm:right-[100px] md:right-[210px] lg:right-[280px] xl:right-[300px]
+                 className={`fixed top-[58px] md:top-[60px] left-0 sm:left-auto sm:right-[100px] md:right-[210px] lg:right-[280px] xl:right-[300px]
                  w-full sm:w-[380px] bg-white rounded-lg shadow-lg z-50
                  max-h-[600px] overflow-y-auto transition
                  transition-transform transition-opacity duration-350 ease-out origin-top
@@ -276,7 +276,7 @@ const Navbar = () => {
 
                 {/* Dropdown */}
                 <div
-                  className={`absolute top-15 right-4 w-[280px] overflow-hidden 
+                  className={`absolute top-13 right-4 w-[280px] overflow-hidden 
                   transition-all duration-400 ease-in-out
                   ${openProfileMenu ? "max-h-96 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}`}
                 >
