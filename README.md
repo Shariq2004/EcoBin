@@ -91,7 +91,47 @@ The frontend and admin of EcoBin is deployed on Vercel while the backend service
 - Provide better communication between users and workers
 - Build a scalable and responsive management platform
 
+## 📝 .env Setup
+
+### Backend (`/backend`)
+
+```env
+MONGO_URL=your_mongodb_connection_string
+
+CLOUD_NAME=your_cloudinary_cloud_name
+CLOUD_API_KEY=your_cloudinary_api_key
+CLOUD_API_SECRET=your_cloudinary_api_secret
+
+GEMINI_API_KEY=your_gemini_api_key
+
+ADMIN_ID=your_admin_id
+ADMIN_EMAIL=your_admin_email
+ADMIN_PASSWORD=your_admin_password
+
+JWT_SECRET=your_jwt_secret
+
+PORT=3000
+```
+
 ---
+
+## Run the Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+---
+
+## Run the Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
 ## Contribution
 
